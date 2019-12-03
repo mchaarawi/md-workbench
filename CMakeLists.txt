@@ -82,8 +82,9 @@ set (CMAKE_C_FLAGS_RELEASE "-O3")
 
 
 ## identify which plugins are compilable
-set(PLUGINS "${PLUGIN_DIR}/md-dummy.c" "${PLUGIN_DIR}/md-posix.c" "${PLUGIN_DIR}/md-mpi.c")
+set(PLUGINS "${PLUGIN_DIR}/md-dfs.c" "${PLUGIN_DIR}/md-dummy.c" "${PLUGIN_DIR}/md-posix.c" "${PLUGIN_DIR}/md-mpi.c")
 add_definitions("-DMD_PLUGIN_MPIIO")
+add_definitions("-DMD_PLUGIN_DFS")
 
 # GIT VERSIONs:
 execute_process(COMMAND git rev-parse --abbrev-ref HEAD
